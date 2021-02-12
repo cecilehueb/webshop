@@ -1,0 +1,125 @@
+* {
+  font-family: monospace;
+  font-size: 1em;
+  color: blueviolet;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: aquamarine;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/*-- header --*/
+.header {
+  width: 100%;
+  margin-top: 25px;
+  background-color: chartreuse;
+}
+
+.header-content {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.title {
+  font-size: 3em;
+  margin: 5px 0px 5px 0;
+  padding-right: 40px;
+}
+
+.searchbar {
+  padding: 3px 3px 3px 10px;
+  border: none;
+  margin: 13px 10px 13px 0;
+  background-color: lightpink;
+  color: tomato;
+}
+
+::placeholder {
+  color: tomato;
+}
+
+.searchbar,
+.nav-button {
+  margin-right: 10px;
+  border-radius: 25px;
+}
+
+/*-- navigation bar --*/
+#nav {
+  display: flex;
+  justify-content: space-around;
+  padding-inline-start: 0;
+}
+
+.nav-button {
+  list-style: none;
+  padding: 3px 20px;
+  flex: 1 auto;
+  background-color: aquamarine;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background-color: tomato;
+}
+
+.nav-button-four {
+  flex: 2 auto;
+}
+
+/*-- main body --*/
+
+.bodywrapper {
+  width: 90%;
+  margin: auto;
+}
+
+/*-- products --*/
+.products-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+
+.product {
+  list-style: none;
+  width: 30%;
+  flex-grow: 1;
+  margin: 10px;
+}
+
+.photo-content {
+  width: 100%;
+}
+
+.descrip {
+  display: none;
+  font-size: 0.9em;
+}
+
+/*-- random large photos --*/
+
+#fillingimage {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  z-index: -10;
+}
+
+.carpetgirl {
+  width: 100%;
+}
