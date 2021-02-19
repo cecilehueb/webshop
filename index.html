@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>webshop</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="styles/mainstyle.css" type="text/css" rel="stylesheet">
 </head>
 
@@ -13,21 +12,28 @@
 
     <div class="wrapper">
 
+        <ol class="locationindicator">
+            <li class="location">your current location</li>
+            <li class="location">> home</li>
+            <li class="location">> here</li>
+            <li class="location">> you are next to the highway</li>
+            <li class="location">> here</li>
+        </ol>
+
         <div class="header">
 
-            <div class="header-content">
+            <div class="header-content bodywrapper">
 
                 <h1 class="title" id="title">
                     <a href="index.html">webshop</a>
                 </h1>
 
-                <input class="searchbar" type="text" placeholder="search...">
+                <input class="searchbar" type="text" placeholder="...">
 
-                <ul id="nav">
+                <ul class="buttons" id="nav">
                     <li class="nav-button" onmouseover="textappear1()">unwrap</li>
                     <li class="nav-button" onmouseover="textappear2()">unwrap</li>
                     <li class="nav-button">unwrap</li>
-                    <li class="nav-button nav-button-four">track and trace</li>
                 </ul>
 
             </div>
@@ -36,82 +42,42 @@
 
         <div class="bodywrapper">
 
-            <h2 class="ocean" id="ocean"><span>the ocean </span>distribution</h3>
-
-            
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-12 col-md-6 card p-5">
-                        <img src="img/big_buildings/1.jpg" class="card-img-top" alt="holtum">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 card p-5">
-                        <img src="img/big_buildings/2.jpg" class="card-img-top" alt="holtum">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 card p-5">
-                        <img src="img/big_buildings/3.jpg" class="card-img-top" alt="holtum">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 card p-5">
-                        <img src="img/big_buildings/4.jpeg" class="card-img-top" alt="holtum">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 card p-5">
-                        <img src="img/big_buildings/5.jpg" class="card-img-top" alt="holtum">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 card p-5">
-                        <img src="img/big_buildings/6.jpeg" class="card-img-top" alt="holtum">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                      </div>
-                  </div>
-            </div>
-
             <ul class="products-list" id="productsList">
                 <li class="product">
-                    <p id="descrip1" class="descrip"></p>
                     <img src="img/big_buildings/1.jpg" class="photo-content" id="photo1">
+                    <p class="photo-descripion">holtrum distribution center - a short descriptopn about how packages are inside of here, while you order them, where does the landscape start and end, who is filling who?</p>
                 </li>
                 <li class="product">
                     <img src="img/big_buildings/2.jpg" class="photo-content" id="photo2">
+                    <p class="photo-descripion">something and a price</p>
                 </li>
                 <li class="product">
                     <img src="img/big_buildings/3.jpg" class="photo-content" id="photo3">
+                    <p class="photo-descripion">something and a price</p>
                 </li>
                 <li class="product">
                     <img src="img/big_buildings/4.jpeg" class="photo-content" id="photo4">
+                    <p class="photo-descripion">something and a price</p>
                 </li>
                 <li class="product">
                     <img src="img/big_buildings/5.jpg" class="photo-content" id="photo5">
+                    <p class="photo-descripion">park 15 logistics</p>
                 </li>
                 <li class="product">
                     <img src="img/big_buildings/6.jpeg" class="photo-content" id="photo6">
+                    <p class="photo-descripion">something and a price</p>
                 </li>
         
             </ul>
 
         </div> <!--end bodywrapper-->
 
-        <div class="footer">]
+        <div class="footer">
         </div> <!--end footer-->
 
 
     </div> <!--end wrapper-->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="mainscript.js"></script>
     
 </body>

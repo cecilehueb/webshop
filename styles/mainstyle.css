@@ -9,7 +9,10 @@
 html,
 body {
   margin: 0;
-  background-color: aquamarine;
+}
+
+a {
+  text-decoration: none;
 }
 
 .wrapper {
@@ -17,33 +20,44 @@ body {
   width: 100%;
 }
 
+/* locatoion indicator */
+.locationindicator {
+  padding: 0;
+  margin: 13px;
+}
+
+.location {
+  display: inline;
+}
+
 /*-- header --*/
 .header {
-  width: 100%;
   margin-top: 25px;
-  background-color: chartreuse;
+  background-color: skyblue;
   border: 1px solid tomato;
 }
 
 .header-content {
   display: flex;
-  width: 90%;
-  margin: auto;
-  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.title,
+.searchbar,
+.nav {
+  margin: 10px 0 10px 0;
 }
 
 .title {
   font-size: 3em;
-  margin: 5px 0px 5px 0;
-  padding-right: 40px;
 }
 
 .searchbar {
   padding: 3px 3px 3px 10px;
-  border: none;
-  margin: 13px 40px 13px 0;
   background-color: aquamarine;
   color: tomato;
+  border: none;
 }
 
 ::placeholder {
@@ -59,16 +73,22 @@ body {
   margin-right: 10px;
 }
 
-/*-- navigation bar --*/
-#nav {
+.nav-button:hover {
+  background-color: tomato;
+}
+
+/*-- button bar --*/
+.buttons {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
+  align-self: stretch;
   padding-inline-start: 0;
 }
 
 .nav-button {
   list-style: none;
-  padding: 3px 20px;
+  padding: 3px 6px;
   flex: 1 auto;
   background-color: aquamarine;
   text-align: center;
@@ -78,10 +98,6 @@ body {
   background-color: tomato;
 }
 
-.nav-button-four {
-  flex: 2 auto;
-}
-
 /*-- main body --*/
 
 .bodywrapper {
@@ -89,20 +105,11 @@ body {
   margin: auto;
 }
 
-.ocean {
-  text-align: center;
-  font-size: 1.5em;
-  color: cornflowerblue;
-  display: none;
-  margin: 30px;
-}
-
 /*-- products --*/
-.products-list {
+ul.products-list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: stretch;
   padding: 0;
   margin-top: 40px;
@@ -110,18 +117,17 @@ body {
 
 .product {
   list-style: none;
-  width: 45%;
-  flex-grow: 1;
-  margin: 10px;
+  width: 100%;
   display: flex;
+  flex-flow: column wrap;
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
   border: 1px solid tomato;
+  margin-bottom: 20px;
 }
 
 .photo-content {
-  width: 80%;
-  margin: 20px;
+  width: 100%;
 }
 
 .descrip {
@@ -129,17 +135,54 @@ body {
   font-size: 0.9em;
 }
 
-/*-- random large photos --*/
+/* what do you call those ~ MEDIAQUERIES */
 
-#fillingimage {
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  width: 100%;
-  z-index: -10;
+/* 600px and larger */
+@media only screen and (min-width: 600px) {
+  /* navigation bar */
+
+  .header-content {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .searchbar {
+    width: 50%;
+    margin-right: 10px;
+  }
+
+  .buttons {
+    align-self: auto;
+  }
+
+  /* main body */
+  .bodywrapper {
+    width: 80%;
+  }
+
+  /* products */
 }
 
-.carpetgirl {
-  width: 100%;
+/* 800px and larger */
+
+@media only screen and (min-width: 800px) {
+  /* navigation bar */
+
+  .header-content {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .title {
+    width: auto;
+  }
+
+  .searchbar {
+    width: 40%;
+  }
 }
