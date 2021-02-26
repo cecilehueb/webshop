@@ -1,9 +1,7 @@
 * {
-  font-family: monospace;
   font-size: 1em;
-  color: tomato;
   box-sizing: border-box;
-  cursor: url("../img/mouse.png"), auto;
+  cursor: default;
 }
 
 html,
@@ -20,21 +18,59 @@ a {
   width: 100%;
 }
 
-/* locatoion indicator */
-.locationindicator {
-  padding: 0;
-  margin: 13px;
+.invisible {
+  animation: fade 13s ease-in;
+  animation-fill-mode: forwards;
+  opacity: 1%;
 }
 
-.location {
+.slowinvisible {
+  animation: fade 10s ease-in 7s;
+  animation-fill-mode: forwards;
+  opacity: 1%;
+}
+
+/* locatoion indicator */
+.indicator {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 13px 13px 25px 13px;
+}
+
+.indicator li {
   display: inline;
+}
+
+.indicator li:nth-child(2) {
+  margin-left: 10px;
+}
+
+/* loader */
+
+.loader {
+  border: 5px solid white;
+  border-top: 4px solid black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1.5s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*-- header --*/
 .header {
-  margin-top: 25px;
   background-color: skyblue;
-  border: 1px solid tomato;
 }
 
 .header-content {
@@ -65,7 +101,8 @@ a {
 }
 
 .searchbar,
-.nav-button {
+.nav-button,
+.product {
   border-radius: 25px;
 }
 
@@ -75,6 +112,18 @@ a {
 
 .nav-button:hover {
   background-color: tomato;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
 }
 
 /*-- button bar --*/
@@ -122,22 +171,50 @@ ul.products-list {
   flex-flow: column wrap;
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
-  border: 1px solid tomato;
   margin-bottom: 20px;
 }
 
 .photo-content {
+  width: 90%;
+  margin: 10px;
+  animation: fade 13s ease-in;
+  animation-fill-mode: forwards;
+  opacity: 1%;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.photo-descripion {
+  display: none;
+}
+
+/* footer */
+
+.footer {
   width: 100%;
 }
 
-.descrip {
-  display: none;
-  font-size: 0.9em;
+.footer .firststroke {
+  height: 70px;
+  background-color: rgb(85, 163, 85);
+}
+
+.footer .secondstroke {
+  height: 400px;
+  background-color: green;
 }
 
 /* what do you call those ~ MEDIAQUERIES */
 
 /* 600px and larger */
+
 @media only screen and (min-width: 600px) {
   /* navigation bar */
 
@@ -180,9 +257,15 @@ ul.products-list {
 
   .title {
     width: auto;
+    margin-right: 10px;
   }
 
   .searchbar {
-    width: 40%;
+    flex: 1 0 40%;
+  }
+
+  /* products */
+  .product {
+    flex: 0 0 47%;
   }
 }

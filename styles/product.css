@@ -1,0 +1,51 @@
+/* MEDIAQUERIES */
+
+* {
+}
+
+.header {
+  margin-bottom: 80px;
+}
+
+.product-name {
+  font-size: 2em;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+}
+.photo {
+  margin-bottom: 20px;
+}
+
+.photo img {
+  width: 100%;
+  margin: auto;
+}
+
+a.buy-button {
+  background-color: yellow;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.stock {
+  color: green;
+  margin: 10px;
+  padding: 10px;
+}
+
+.stock:nth-child(1) {
+  border: 1px solid green;
+}
+
+/* 600px and larger */
+
+@media only screen and (min-width: 600px) {
+}
+
+/* 800px and larger */
+
+@media only screen and (min-width: 800px) {
+}

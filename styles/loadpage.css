@@ -1,0 +1,18 @@
+.loadpage {
+  margin: auto;
+  margin-top: 20%;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: skyblue;
+  width: 100px;
+}
+
+.loadpage:hover {
+  background-color: lightcyan;
+}
+
+.loadpage a {
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
