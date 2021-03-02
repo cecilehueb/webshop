@@ -1,11 +1,23 @@
-/* MEDIAQUERIES */
+/* Base Styles */
 
 * {
+  font-size: 1em;
+  box-sizing: border-box;
+  cursor: default;
 }
+
+html,
+body {
+  margin: 0;
+}
+
+/* header */
 
 .header {
   margin-bottom: 80px;
 }
+
+/* main body */
 
 .product-name {
   font-size: 2em;
@@ -14,9 +26,12 @@
 
 .container {
   margin: auto;
+  position: relative;
+  margin-bottom: 30px;
 }
-.photo {
-  margin-bottom: 20px;
+
+.description {
+  position: relative;
 }
 
 .photo img {
@@ -24,21 +39,64 @@
   margin: auto;
 }
 
-a.buy-button {
-  background-color: yellow;
+a.buy-button,
+a.wishlist {
   border-radius: 25px;
   padding: 10px;
+  display: inline-block;
+  margin: 20px 0 0 0;
+}
+
+a.buy-button {
+  background-color: yellow;
+  margin-right: 20px;
+}
+
+a.wishlist {
+  border: 1px solid rosybrown;
+}
+
+a.buy-button:hover {
+  background-color: darkkhaki;
+}
+
+a.wishlist:hover {
+  background-color: rosybrown;
 }
 
 .stock {
   color: green;
-  margin: 10px;
-  padding: 10px;
+  display: block;
+  margin-top: 30px;
 }
 
-.stock:nth-child(1) {
+.stock span:nth-child(1) {
   border: 1px solid green;
+  padding: 5px;
 }
+
+/* zoom stuff */
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  /*set the size of the result div:*/
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -5;
+  opacity: 0.1%;
+}
+
+/* MEDIAQUERIES */
 
 /* 600px and larger */
 
@@ -48,4 +106,25 @@ a.buy-button {
 /* 800px and larger */
 
 @media only screen and (min-width: 800px) {
+  /* product display */
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .product-name {
+    text-align: start;
+  }
+
+  .photo,
+  .description {
+    flex: 1 1 40%;
+  }
+
+  .photo {
+    margin-right: 20px;
+  }
 }

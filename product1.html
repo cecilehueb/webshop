@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webshop</title>
+    <link href="styles/mainstyle.css" type="text/css" rel="stylesheet">
+    <link href="styles/product.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <ul class="indicator">
+            <li class="location">your current location</li>
+            <li class="location">> home</li>
+        </ul>
+
+        <div class="header">
+
+            <div class="header-content bodywrapper">
+
+                <h1 class="title" id="title">
+                    <a href="webshop.html">webshop</a>
+                </h1>
+
+                <input class="searchbar" type="text" placeholder="">
+
+                <ul class="buttons" id="nav">
+                    <li class="nav-button" "></li>
+                    <li class="nav-button" "></li>
+                    <li class="nav-button"></li>
+                </ul>
+
+            </div>
+
+        </div> <!-- end header -->
+        <div class="bodywrapper">
+            <h2 class="product-name">Broekman Logistics</h3>
+            <p class="product-description">Holtrum, Limburg, The Netherlands</p>
+
+            <div class="container">
+                <div class="photo">
+                    <img id="myimage" src="img/big_buildings/holtrumflat.jpg" alt="holtrum">
+                </div>
+                <div class="description">
+                    <div class="description-words">
+                        <div class="stock">
+                            <span>in stock</span>
+                            <span><b>select</b></span>
+                        </div>
+                        <a class="buy-button">add to shopping chart</a>
+                        <a class="wishlist">add to wishlist</a>
+                       
+                    </div>
+                    <div id="myresult" class="img-zoom-result"></div>
+
+                </div>
+                
+            </div>
+
+        </div> <!--end bodywrapper-->
+
+        <div class="footer">
+            <div class="firststroke"></div>
+            <div class="secondstroke"></div>
+        </div> <!--end footer-->
+
+
+    </div> <!--end wrapper-->
+    
+<script src="zoom.js"></script>
+<script src="mainscript.js"></script>
+
+</body>
+</html>

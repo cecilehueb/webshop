@@ -2,6 +2,7 @@
   font-size: 1em;
   box-sizing: border-box;
   cursor: default;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 html,
@@ -11,6 +12,8 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
+  cursor: alias;
 }
 
 .wrapper {
@@ -41,6 +44,8 @@ a {
 
 .indicator li {
   display: inline;
+  font-family: serif;
+  line-height: 30px;
 }
 
 .indicator li:nth-child(2) {
@@ -85,19 +90,20 @@ a {
   margin: 10px 0 10px 0;
 }
 
-.title {
+.title a {
   font-size: 3em;
+  color: blue;
 }
 
 .searchbar {
   padding: 3px 3px 3px 10px;
   background-color: aquamarine;
-  color: tomato;
   border: none;
+  text-align: center;
 }
 
 ::placeholder {
-  color: tomato;
+  color: blue;
 }
 
 .searchbar,
@@ -108,10 +114,12 @@ a {
 
 .nav-button {
   margin-right: 10px;
+  width: 70px;
+  height: 25px;
 }
 
 .nav-button:hover {
-  background-color: tomato;
+  background-color: blue;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
@@ -143,10 +151,6 @@ a {
   text-align: center;
 }
 
-.nav-button:hover {
-  background-color: tomato;
-}
-
 /*-- main body --*/
 
 .bodywrapper {
@@ -172,6 +176,7 @@ ul.products-list {
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
   margin-bottom: 20px;
+  cursor: alias;
 }
 
 .photo-content {
@@ -261,7 +266,7 @@ ul.products-list {
   }
 
   .searchbar {
-    flex: 1 0 40%;
+    flex: 1 0 35%;
   }
 
   /* products */
