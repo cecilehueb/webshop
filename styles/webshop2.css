@@ -1,0 +1,328 @@
+* {
+  font-size: 1em;
+  box-sizing: border-box;
+  cursor: default;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: alias;
+}
+
+/* background */
+
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  border: 3px solid red;
+}
+
+/* wrapper */
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* invisible-classes */
+
+.invisible {
+  animation: fade 13s ease-in;
+  animation-fill-mode: forwards;
+  opacity: 1%;
+}
+
+.slowinvisible {
+  animation: fade 10s ease-in 7s;
+  animation-fill-mode: forwards;
+  opacity: 1%;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+/*sticky things  */
+
+.header {
+  background-color: skyblue;
+}
+
+.header-start {
+  margin-top: 50px;
+}
+
+.header-sticky {
+  position: sticky;
+  top: 0;
+  margin-top: 0;
+}
+
+.darkblue {
+  width: 100%;
+  height: 90px;
+  background: #5f74dc;
+  z-index: -9;
+}
+
+.darkblue-start {
+  position: absolute;
+  top: 700px;
+}
+
+.darkblue-sticky {
+  position: sticky;
+}
+
+.purple {
+  width: 100%;
+  height: 150px;
+  background: #2d7c8a;
+  z-index: -8;
+}
+
+.purple-start {
+  position: absolute;
+  top: 900px;
+}
+
+.purple-sticky {
+  position: sticky;
+}
+/*-- header --*/
+
+.header-content {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.title,
+.searchbar,
+.nav {
+  margin: 10px 0 10px 0;
+}
+
+.title a {
+  font-size: 3em;
+  color: blue;
+}
+
+.searchbar {
+  padding: 3px 3px 3px 10px;
+  background-color: aquamarine;
+  border: none;
+  text-align: center;
+}
+
+::placeholder {
+  color: blue;
+}
+
+.searchbar,
+.nav-button,
+.product {
+  border-radius: 25px;
+}
+
+.nav-button {
+  margin-right: 10px;
+  width: 70px;
+  height: 25px;
+}
+
+.nav-button:hover {
+  background-color: blue;
+}
+
+/*-- button bar --*/
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-self: stretch;
+  padding-inline-start: 0;
+}
+
+.nav-button {
+  list-style: none;
+  padding: 3px 6px;
+  flex: 1 auto;
+  background-color: aquamarine;
+  text-align: center;
+}
+
+/*-- main body --*/
+
+.bodywrapper {
+  width: 90%;
+  margin: auto;
+}
+
+/* products */
+
+.product {
+  border: 0.5px solid #6275a9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px auto;
+}
+
+/* img */
+
+.product-photo {
+  margin: auto;
+}
+
+.product-photo img {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+/* descriptoins */
+
+.product-description {
+  border-top: 0.25px solid #6275a9;
+  padding: 20px;
+}
+
+a.buy-button,
+a.wishlist {
+  border-radius: 25px;
+  padding: 10px;
+  display: inline-block;
+  margin: 20px 0 0 0;
+}
+
+a.buy-button {
+  background-color: yellow;
+  margin-right: 20px;
+}
+
+a.wishlist {
+  border: 1px solid rosybrown;
+}
+
+a.buy-button:hover {
+  background-color: darkkhaki;
+}
+
+a.wishlist:hover {
+  background-color: rosybrown;
+}
+
+.stock {
+  color: green;
+  display: block;
+}
+
+.stock span:nth-child(1) {
+  border: 1px solid green;
+  padding: 5px;
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  z-index: -9;
+}
+
+.footer .firststroke {
+  height: 70px;
+  background-color: rgb(85, 163, 85);
+}
+
+.footer .secondstroke {
+  height: 400px;
+  background-color: green;
+}
+
+/* what do you call those ~ MEDIAQUERIES */
+
+/* 600px and larger */
+
+@media only screen and (min-width: 600px) {
+  /* navigation bar */
+
+  .header-content {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .searchbar {
+    width: 50%;
+    margin-right: 10px;
+  }
+
+  .buttons {
+    align-self: auto;
+  }
+
+  /* main body */
+  .bodywrapper {
+    width: 80%;
+  }
+
+  /* products */
+}
+
+/* 800px and larger */
+
+@media only screen and (min-width: 800px) {
+  /* navigation bar */
+
+  .header-content {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .title {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  .searchbar {
+    flex: 1 1 25%;
+  }
+
+  /* products */
+
+  .product {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .product-photo {
+    flex: 1 1 50%;
+  }
+
+  .product-description {
+    flex: 1 1 50%;
+    border-top: none;
+    border-left: 0.25px solid #6275a9;
+    padding: 30px;
+    margin: 30px 0;
+  }
+}
